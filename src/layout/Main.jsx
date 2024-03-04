@@ -46,7 +46,7 @@ export default class Main extends Component {
     }
     if (prevState.query === this.state.query && this.state.moreData === true) {
       fetch(
-        `http://www.omdbapi.com/?apikey=1a328256&s=${this.state.query.trim()}&page=${
+        `http://www.omdbapi.com/?apikey=${API_KEY}&s=${this.state.query.trim()}&page=${
           this.state.currentPage
         }${
           this.state.type == "All"
@@ -74,7 +74,7 @@ export default class Main extends Component {
         prevState.type !== this.state.type)
     ) {
       fetch(
-        `http://www.omdbapi.com/?apikey=1a328256&s=${this.state.query.trim()}&page=${
+        `http://www.omdbapi.com/?apikey=${API_KEY}&s=${this.state.query.trim()}&page=${
           this.state.currentPage
         }${
           this.state.type == "All"
